@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krave by Ari | Elevating Every Bite — Luxury Bakery & Patisserie</title>
+  <meta name="description" content="Delicious desserts and pastries crafted with passion by chef Ari. Sweets, moments, and bigger smiles for every celebration." />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧁</text></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond, Poppins, Great Vibes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       HEADER: Standalone Logo on Left + Floating Navigation Pill on Right
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      
+      <!-- Standalone Logo: completely separate from the navbar pill button -->
+      <a href="#hero" class="brand-logo-standalone" id="brand-logo" aria-label="Krave by Ari Homepage">
+        <img src="assets/images/krave_logo.png" alt="Krave by Ari - Elevating Every Bite" class="main-logo-img" />
+      </a>
+
+      <!-- Floating Pill Navigation (Center / Right) -->
+      <div class="nav-pill-container" id="nav-pill-container">
+        <nav class="nav-pill-links" id="nav-pill-links" aria-label="Primary Navigation">
+          <a href="#hero" class="pill-link active">Home</a>
+          <a href="#specialty" class="pill-link">Menu</a>
+          <a href="#about" class="pill-link">About</a>
+          <a href="#favorites" class="pill-link">Events</a>
+          <a href="#testimonials" class="pill-link">Journal</a>
+          <a href="#contact" class="pill-link">Contact</a>
+        </nav>
+
+        <div class="nav-pill-actions">
+          <!-- Search Icon Button -->
+          <button class="pill-icon-btn" id="search-trigger" aria-label="Search desserts">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- Shopping Cart Button with Count Badge -->
+          <button class="pill-icon-btn cart-trigger" id="cart-trigger" aria-label="View shopping cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-badge" id="cart-badge">1</span>
+          </button>
+
+          <!-- Order Now Pill Button -->
+          <button class="pill-cta-btn" id="nav-order-btn">Order Now</button>
+        </div>
+      </div>
+
+      <!-- Mobile Controls (Search, Cart, Order Now, Hamburger) -->
+      <div class="mobile-header-actions">
+        <button class="pill-icon-btn mobile-search-btn" id="mobile-search-trigger" aria-label="Search desserts">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <button class="pill-icon-btn mobile-cart-btn" id="mobile-cart-trigger" aria-label="View shopping cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="mobile-cart-badge">1</span>
+        </button>
+
+        <button class="mobile-order-pill" id="mobile-nav-order-btn">Order Now</button>
+
+        <button class="mobile-hamburger" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Slide Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <nav class="mobile-nav-links">
+        <a href="#hero" class="mobile-nav-link">Home</a>
+        <a href="#specialty" class="mobile-nav-link">Menu</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#favorites" class="mobile-nav-link">Events</a>
+        <a href="#testimonials" class="mobile-nav-link">Journal</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </nav>
+      <div class="mobile-nav-footer">
+        <button class="btn btn-primary w-full" id="mobile-order-btn">Order Now</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         HERO SECTION: Standalone breadcrumbs, Display Heading, Organic Wave Cake
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="hero-wrapper">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-text-content">
+          <!-- Category Micro Breadcrumbs -->
+          <div class="hero-categories-tags">
+            <span class="cat-tag">Deserts .</span>
+            <span class="cat-tag">Pastries .</span>
+            <span class="cat-tag">Chef Service .</span>
+          </div>
+
+          <!-- Hero Headline -->
+          <h1 class="hero-main-title">
+            <span class="title-row">Sweets</span>
+            <span class="title-row text-pink">Moments</span>
+            <span class="title-row">Bigger Smiles</span>
+          </h1>
+
+          <!-- Hero Subtitle -->
+          <p class="hero-description-text">
+            Delicious Deserts and pastries crafted with passion by chef Ari<br />
+            from everyday treat to special celebration- we elevate every bite
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-btn-row">
+            <button class="btn-pink-pill" id="hero-order-btn">
+              <span>Order now</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <button class="btn-outline-pill" id="hero-view-menu-btn">
+              View menu
+            </button>
+          </div>
+
+          <!-- Trust & Value Badges -->
+          <div class="hero-values-badges">
+            <div class="value-item">
+              <img src="assets/images/icon_cake.svg" alt="Freshly made" width="30" height="30" class="value-icon" />
+              <div class="value-text">
+                <span>Freshly</span>
+                <span>made</span>
+              </div>
+            </div>
+
+            <div class="value-item">
+              <img src="assets/images/icon_heart.svg" alt="Premium ingredients" width="30" height="30" class="value-icon" />
+              <div class="value-text">
+                <span>Premium</span>
+                <span>ingredients</span>
+              </div>
+            </div>
+
+            <div class="value-item">
+              <img src="assets/images/icon_chef.svg" alt="Baked with love" width="30" height="30" class="value-icon" />
+              <div class="value-text">
+                <span>Baked</span>
+                <span>with love</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual: Organic Masked Celebration Drip Cake -->
+        <div class="hero-visual-wrapper">
+          <div class="hero-cake-container">
+            <img src="assets/images/hero_vector_cake.png" alt="Signature drip celebration cake by Krave by Ari" class="hero-vector-cake-img" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         OUR SPECIALTY SECTION (Figma Node 116:566)
+         ========================================================================= -->
+    <section class="specialty-section" id="specialty">
+      <div class="container">
+        
+        <div class="specialty-header text-center">
+          <p class="specialty-overline">OUR SPECIALTY</p>
+          <h2 class="specialty-title">
+            A Treat for <span class="text-pink">Every Cravings</span>
+          </h2>
+        </div>
+
+        <div class="specialty-grid">
+          <!-- Card 1: Cakes -->
+          <div class="specialty-card" data-category="cakes">
+            <div class="card-img-box">
+              <img src="assets/images/card_cakes.png" alt="Cakes" class="specialty-img" />
+            </div>
+            <h3 class="card-title">cakes</h3>
+            <p class="card-subtitle">For every celebration</p>
+          </div>
+
+          <!-- Card 2: Cookies -->
+          <div class="specialty-card" data-category="cookies">
+            <div class="card-img-box">
+              <img src="assets/images/card_cookies.png" alt="Cookies" class="specialty-img" />
+            </div>
+            <h3 class="card-title">cookies</h3>
+            <p class="card-subtitle">Sweet treats for any occasion</p>
+          </div>
+
+          <!-- Card 3: Pastries -->
+          <div class="specialty-card" data-category="pastries">
+            <div class="card-img-box">
+              <img src="assets/images/card_pastries.png" alt="Pastries" class="specialty-img" />
+            </div>
+            <h3 class="card-title">pastries</h3>
+            <p class="card-subtitle">Delicious delights to indulge in</p>
+          </div>
+
+          <!-- Card 4: Brownies -->
+          <div class="specialty-card" data-category="brownies">
+            <div class="card-img-box">
+              <img src="assets/images/card_brownies.png" alt="Brownies" class="specialty-img" />
+            </div>
+            <h3 class="card-title">brownies</h3>
+            <p class="card-subtitle">Rich and fudgy for chocolate lovers</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         ABOUT KRAVE SECTION (Figma Node 118:1183)
+         "More Than Desserts, It's a Feeling"
+         ========================================================================= -->
+    <section class="about-section" id="about">
+      <div class="container about-container">
+        
+        <!-- Left Image Composition -->
+        <div class="about-visuals">
+          <div class="about-img-frame cupcakes-frame">
+            <img src="assets/images/about_cupcakes.png" alt="Pink frosted cupcakes" class="about-img" />
+            <div class="badge-made-with-love">
+              <span>Made with Love 🩷</span>
+            </div>
+          </div>
+          <div class="about-img-frame chef-frame">
+            <img src="assets/images/about_chef.png" alt="Pastry Chef Ari crafting artisan pastries" class="about-img" />
+          </div>
+          <!-- Subtle script signature watermark -->
+          <div class="about-watermark-text" aria-hidden="true">Krave Ari</div>
+        </div>
+
+        <!-- Right Content & Metrics -->
+        <div class="about-text-content">
+          <p class="about-overline">ABOUT KRAVE</p>
+          <h2 class="about-title">
+            More Than Desserts,<br />
+            <span class="text-pink">It's a Feeling</span>
+          </h2>
+          <p class="about-description">
+            At Krave by Ari, we believe great desserts create unforgettable moments. Every cake, pastry, and treat is made with premium ingredients, creativity, and a whole lot of love.
+          </p>
+
+          <!-- Stats Grid -->
+          <div class="about-stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Quality Ingredients</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Happy Customers</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Years of Sweetness</span>
+            </div>
+          </div>
+
+          <!-- Our Story Button -->
+          <button class="btn-story" id="our-story-btn">
+            <span>Our Story</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Background Watermark Logo -->
+        <div class="about-bg-watermark-logo" aria-hidden="true">
+          <img src="assets/images/krave_logo.png" alt="" />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         CUSTOMER FAVORITES SECTION (Figma Node 117:693)
+         ========================================================================= -->
+    <section class="favorites-section" id="favorites">
+      <div class="container">
+        
+        <div class="favorites-header text-center">
+          <p class="favorites-overline">POPULAR PICKS</p>
+          <h2 class="favorites-title">
+            Customer <span class="text-pink">Favorites</span>
+          </h2>
+          <p class="favorites-subtext">
+            Here are some of the treats everyone's loving right now.
+          </p>
+        </div>
+
+        <!-- 4 Product Cards Grid -->
+        <div class="products-grid">
+          
+          <!-- Product 1: Chocolate Delight -->
+          <article class="product-card">
+            <div class="product-img-box">
+              <img src="assets/images/favorite_chocolate.png" alt="Chocolate Delight" class="product-img" loading="lazy" />
+            </div>
+            <div class="product-details">
+              <h3 class="product-name">Chocolate Delight</h3>
+              <p class="product-caption">Rich. Moist. Irresistible.</p>
+              <div class="product-action-row">
+                <span class="product-price">₦18,000</span>
+                <button class="btn-add-cart" data-id="1" data-name="Chocolate Delight" data-price="18000" data-img="assets/images/favorite_chocolate.png" aria-label="Add Chocolate Delight to cart">
+                  <img src="assets/images/icon_cart_add.svg" alt="Add to cart" width="18" height="18" />
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2: Red Velvet Cupcake -->
+          <article class="product-card">
+            <div class="product-img-box">
+              <img src="assets/images/favorite_redvelvet.png" alt="Red Velvet Cupcake" class="product-img" loading="lazy" />
+            </div>
+            <div class="product-details">
+              <h3 class="product-name">Red Velvet Cupcake</h3>
+              <p class="product-caption">Classic with a twist.</p>
+              <div class="product-action-row">
+                <span class="product-price">₦3,000</span>
+                <button class="btn-add-cart" data-id="2" data-name="Red Velvet Cupcake" data-price="3000" data-img="assets/images/favorite_redvelvet.png" aria-label="Add Red Velvet Cupcake to cart">
+                  <img src="assets/images/icon_cart_add.svg" alt="Add to cart" width="18" height="18" />
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3: French Macarons -->
+          <article class="product-card">
+            <div class="product-img-box">
+              <img src="assets/images/favorite_macarons.png" alt="French Macarons" class="product-img" loading="lazy" />
+            </div>
+            <div class="product-details">
+              <h3 class="product-name">French Macarons</h3>
+              <p class="product-caption">Sweet elegance.</p>
+              <div class="product-action-row">
+                <span class="product-price">₦2,500</span>
+                <button class="btn-add-cart" data-id="3" data-name="French Macarons" data-price="2500" data-img="assets/images/favorite_macarons.png" aria-label="Add French Macarons to cart">
+                  <img src="assets/images/icon_cart_add.svg" alt="Add to cart" width="18" height="18" />
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4: Berry Cheesecake -->
+          <article class="product-card">
+            <div class="product-img-box">
+              <img src="assets/images/favorite_cheesecake.png" alt="Berry Cheesecake" class="product-img" loading="lazy" />
+            </div>
+            <div class="product-details">
+              <h3 class="product-name">Berry Cheesecake</h3>
+              <p class="product-caption">Creamy. Fruity. Perfect.</p>
+              <div class="product-action-row">
+                <span class="product-price">₦8,000</span>
+                <button class="btn-add-cart" data-id="4" data-name="Berry Cheesecake" data-price="8000" data-img="assets/images/favorite_cheesecake.png" aria-label="Add Berry Cheesecake to cart">
+                  <img src="assets/images/icon_cart_add.svg" alt="Add to cart" width="18" height="18" />
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- View Full Menu Button -->
+        <div class="view-menu-wrapper text-center">
+          <button class="btn-view-full-menu" id="view-full-menu-btn">
+            View Full Menu →
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         TESTIMONIALS SECTION (Figma Node 119:1765)
+         "What Our Customers Say"
+         ========================================================================= -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        
+        <div class="testimonials-header text-center">
+          <p class="testimonials-overline">KIND WORDS</p>
+          <h2 class="testimonials-title">
+            What Our <span class="text-pink">Customers Say</span>
+          </h2>
+        </div>
+
+        <div class="testimonials-grid">
+          
+          <!-- Testimonial 1: Tolu A. -->
+          <div class="testimonial-card">
+            <div class="quote-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="#e91e8c">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            <p class="testimonial-quote">
+              "The best cakes I've ever had! Every bite tastes like love. 🩷"
+            </p>
+            <div class="customer-info-row">
+              <img src="assets/images/avatar_tolu.png" alt="Tolu A." class="customer-avatar" />
+              <div class="customer-meta">
+                <span class="customer-name">Tolu A.</span>
+                <div class="star-rating" aria-label="5 stars">
+                  <img src="assets/images/icon_star.svg" alt="★" width="16" height="16" />
+                  <img src="assets/images/icon_star.svg" alt="★" width="16" height="16" />
+                  <img src="assets/images/icon_star.svg" alt="★" width="16" height="16" />
+                  <img src="assets/images/icon_star.svg" alt="★" width="16" height="16" />
+                  <img src="assets/images/icon_star.svg" alt="★" width="16" height="16" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2: Mide K. -->
+          <div class="testimonial-card">
+            <div class="quote-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="#e91e8c">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            <p class="testimonial-quote">
+              "Beautiful designs, amazing taste and great service!"
+            </p>
+            <div class="customer-info-row">
+              <img src="assets/images/avatar_mide.png" alt="Mide K." class="customer-avatar" />
+              <div class="customer-meta">
+                <span class="customer-name">Mide K.</span>
+                <div class="star-rating" aria-label="5 stars">
+                  <img src="assets/images/icon_star.svg" alt="★" width="16" height="16" />
+                  <img src="assets/images/icon_star.svg" alt="★" width="16" height="16" />
+                  <img src="assets/images/icon_star.svg" alt="★" width="16" height="16" />
+                  <img src="assets/images/icon_star.svg" alt="★" width="16" height="16" />
+                  <img src="assets/images/icon_star.svg" alt="★" width="16" height="16" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3: Funmi D. -->
+          <div class="testimonial-card">
+            <div class="quote-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="#e91e8c">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            <p class="testimonial-quote">
+              "Krave by Ari never disappoints. My go-to for desserts! 😍"
+            </p>
+            <div class="customer-info-row">
+              <img src="assets/images/avatar_funmi.png" alt="Funmi D." class="customer-avatar" />
+              <div class="customer-meta">
+                <span class="customer-name">Funmi D.</span>
+                <div class="star-rating" aria-label="5 stars">
+                  <img src="assets/images/icon_star.svg" alt="★" width="16" height="16" />
+                  <img src="assets/images/icon_star.svg" alt="★" width="16" height="16" />
+                  <img src="assets/images/icon_star.svg" alt="★" width="16" height="16" />
+                  <img src="assets/images/icon_star.svg" alt="★" width="16" height="16" />
+                  <img src="assets/images/icon_star.svg" alt="★" width="16" height="16" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SWEET CTA BANNER (Figma Node 120:1840)
+         "Lets make life sweeter"
+         ========================================================================= -->
+    <section class="cta-banner-section" id="contact">
+      <div class="container text-center">
+        <h2 class="cta-banner-title">Lets make life sweeter</h2>
+        <p class="cta-banner-subtitle">
+          order now for your event, celebrration or just because you deserve a treat
+        </p>
+
+        <div class="cta-banner-actions">
+          <button class="btn-cta-white" id="cta-order-btn">
+            <span>Order now</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
+          <a href="https://wa.me/2348160128286?text=Hi%20Krave%20by%20Ari,%20I%20would%20like%20to%20place%20a%20dessert%20order!" target="_blank" rel="noopener noreferrer" class="btn-cta-whatsapp">
+            <img src="assets/images/icon_whatsapp.svg" alt="WhatsApp" width="20" height="20" />
+            <span>whatsapp us</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER (Figma Node 120:1853)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-columns-grid">
+        
+        <!-- Col 1: Brand & Tagline -->
+        <div class="footer-col footer-col-brand">
+          <div class="footer-brand-lockup">
+            <span class="footer-logo-script">Krave</span>
+            <span class="footer-logo-sub">ARI</span>
+            <span class="footer-logo-tagline">ELEVATING EVERY BITE</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#specialty">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#favorites">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Follow Us -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Follow Us</h4>
+          <ul class="footer-links-list social-links-list">
+            <li>
+              <a href="https://instagram.com/kravebyari" target="_blank" rel="noopener noreferrer">
+                <span>📸</span> <span>@kravebyari</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://tiktok.com/@kravebyari" target="_blank" rel="noopener noreferrer">
+                <span>🎵</span> <span>@kravebyari</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:08160128286">
+                <span>📞</span> <span>0816 012 8286</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Newsletter</h4>
+          <p class="footer-newsletter-text">
+            Get sweet updates, new menu items and special offers.
+          </p>
+          <form class="footer-newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Your email address" class="newsletter-input" id="newsletter-email" required />
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom-row">
+        <p>© 2026 Krave by Ari. All rights reserved.</p>
+        <p>Baked with Passion ❤️ Served with Love</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS & OVERLAYS
+       ========================================================================= -->
+
+  <!-- Cart Slide-out Drawer Overlay -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- Cart Slide-out Drawer -->
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Bag">
+    <div class="drawer-header">
+      <div class="drawer-title-box">
+        <h3>Your Sweet Bag</h3>
+        <span class="drawer-items-count" id="drawer-items-count">1 treat</span>
+      </div>
+      <button class="drawer-close-btn" id="close-cart-btn" aria-label="Close bag">✕</button>
+    </div>
+
+    <div class="cart-drawer-body" id="cart-drawer-body">
+      <!-- Items populated by app.js -->
+      <div class="cart-items-list" id="cart-items-list"></div>
+
+      <!-- Empty State -->
+      <div class="cart-empty-state" id="cart-empty-state" style="display: none;">
+        <span class="empty-icon">🍰</span>
+        <h4>Your bag is feeling light</h4>
+        <p>Explore our artisan creations and treat yourself!</p>
+        <button class="btn btn-primary" id="explore-treats-btn">Explore Treats</button>
+      </div>
+    </div>
+
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span class="cart-subtotal" id="cart-subtotal">₦18,000</span>
+      </div>
+      <p class="summary-note">Delivery fee calculated upon order confirmation.</p>
+      <button class="btn-pink-pill w-full checkout-btn" id="checkout-btn">
+        Proceed to Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- Checkout / WhatsApp Order Modal -->
+  <dialog class="app-modal" id="order-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="close-order-modal" aria-label="Close checkout">✕</button>
+      <div class="modal-header">
+        <span class="modal-badge">Direct Bakery Order</span>
+        <h3 class="modal-title">Complete Your Order</h3>
+        <p class="modal-desc">Confirm details to dispatch your order directly to Chef Ari via WhatsApp.</p>
+      </div>
+
+      <form id="order-form" class="modal-form">
+        <div class="form-group">
+          <label for="order-name">Your Full Name *</label>
+          <input type="text" id="order-name" required placeholder="e.g. Tolu Adeleke" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="order-phone">Phone / WhatsApp *</label>
+            <input type="tel" id="order-phone" required placeholder="e.g. 0812 345 6789" />
+          </div>
+          <div class="form-group">
+            <label for="order-date">Preferred Delivery Date *</label>
+            <input type="date" id="order-date" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="order-address">Delivery Address *</label>
+          <input type="text" id="order-address" required placeholder="Street address, Estate, or Landmark" />
+        </div>
+
+        <div class="form-group">
+          <label for="order-notes">Special Instructions or Custom Text on Cake (Optional)</label>
+          <textarea id="order-notes" rows="2" placeholder="e.g. Write 'Happy 25th Birthday Mide' on cake in gold icing"></textarea>
+        </div>
+
+        <div class="order-preview-box">
+          <div class="preview-header">
+            <span>Order Summary</span>
+            <span class="preview-total" id="modal-total-amount">₦18,000</span>
+          </div>
+          <div class="modal-order-items" id="modal-order-items"></div>
+        </div>
+
+        <button type="submit" class="btn-whatsapp-submit w-full">
+          <img src="assets/images/icon_whatsapp.svg" alt="" width="22" height="22" />
+          <span>Send Order via WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Search Modal -->
+  <dialog class="app-modal" id="search-modal">
+    <div class="modal-card search-card">
+      <button class="modal-close-btn" id="close-search-modal" aria-label="Close search">✕</button>
+      <div class="search-input-wrap">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" id="search-input" placeholder="Search cakes, pastries, cookies..." autofocus />
+      </div>
+      <div class="search-results-list" id="search-results">
+        <!-- Live search results rendered by app.js -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Full Menu Explorer Modal -->
+  <dialog class="app-modal menu-explorer-modal" id="full-menu-modal">
+    <div class="modal-card menu-explorer-card">
+      <button class="modal-close-btn" id="close-full-menu-modal" aria-label="Close menu">✕</button>
+      <div class="modal-header text-center">
+        <span class="modal-badge">Artisan Patisserie</span>
+        <h3 class="modal-title">Our Complete Menu</h3>
+        <p class="modal-desc">Freshly crafted every day with 100% premium ingredients.</p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="menu-filter-bar">
+        <button class="menu-filter-btn active" data-filter="all">All Items</button>
+        <button class="menu-filter-btn" data-filter="cakes">Cakes</button>
+        <button class="menu-filter-btn" data-filter="pastries">Pastries</button>
+        <button class="menu-filter-btn" data-filter="cookies">Cookies</button>
+        <button class="menu-filter-btn" data-filter="brownies">Brownies</button>
+      </div>
+
+      <!-- Menu Items Container -->
+      <div class="menu-explorer-grid" id="menu-explorer-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Chef Ari Story Modal -->
+  <dialog class="app-modal" id="story-modal">
+    <div class="modal-card story-card">
+      <button class="modal-close-btn" id="close-story-modal" aria-label="Close story">✕</button>
+      <div class="story-content-wrap">
+        <div class="story-img-header">
+          <img src="assets/images/about_chef.png" alt="Chef Ari crafting pastries" />
+        </div>
+        <div class="story-body">
+          <span class="modal-badge">The Chef's Craft</span>
+          <h3 class="modal-title">Passion in Every Crumb</h3>
+          <p>Founded by Chef Ari, Krave by Ari began with a simple belief: desserts shouldn't just taste sweet — they should evoke genuine delight and transform celebrations into lasting memories.</p>
+          <p>From studying master patisserie techniques to perfecting rich sponge crumb textures, every single recipe is crafted from scratch using uncompromised dairy, real vanilla beans, and velvety Belgian chocolate.</p>
+          <blockquote>"We don't just bake cakes; we craft edible happiness." — Chef Ari</blockquote>
+          <button class="btn-pink-pill" id="close-story-btn">Close Story</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
